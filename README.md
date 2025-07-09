@@ -1,47 +1,33 @@
-# Astro Starter Kit: Minimal
+# Personal Blog with Astro & Contentful
 
-```sh
-npm create astro@latest -- --template minimal
-```
+This is a personal blog built for a friend using a modern, fast, and easy-to-manage tech stack. The goal was to create a beautiful, content-focused blog that she could easily update herself without needing to touch any code.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+The design is inspired by clean, minimalist blog layouts that prioritize readability.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## ✨ Features
 
-## 🚀 Project Structure
+-   **Blazing Fast Performance:** Built with Astro for a static site that loads instantly.
+-   **Headless CMS:** All content is managed through Contentful, allowing for easy updates.
+-   **Styled with Tailwind CSS:** A utility-first CSS framework for rapid and custom UI development.
+-   **Fully Responsive:** Looks great on all devices, from mobile phones to desktops.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🚀 Tech Stack
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+-   **Framework:** [Astro](https://astro.build/)
+-   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+-   **Content:** [Contentful (Headless CMS)](https://www.contentful.com/)
+-   **Deployment:** (Will be deployed on Vercel/Netlify)
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## local-dev-setup How to Run Locally
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+To run this project on your own machine, you'll need to:
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+1.  Clone the repository.
+2.  Install the dependencies: `npm install`
+3.  Create a `.env` file in the root of the project.
+4.  Add your own Contentful API keys to the `.env` file:
+    ```
+    CONTENTFUL_SPACE_ID="YOUR_SPACE_ID"
+    CONTENTFUL_DELIVERY_TOKEN="YOUR_DELIVERY_TOKEN"
+    ```
+5.  Start the development server: `npm run dev`

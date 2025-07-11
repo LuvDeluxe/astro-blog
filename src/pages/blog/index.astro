@@ -1,0 +1,47 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PostPreview from "../../components/PostPreview.astro";
+
+// @Todo: replace with a real API call to Contentful
+
+const fakePosts = [
+    {
+        title: 'My First Blog Post',
+        href: '/blog/my-first-post',
+        imageUrl: 'https://placehold.co/600x400/a78bfa/ffffff?text=Post+1',
+        excerpt: 'This is a short summary of my very first post. We are building the design first.'
+    },
+    {
+    title: 'A Guide to Making Great Coffee',
+    href: '/blog/making-coffee',
+    imageUrl: 'https://placehold.co/600x400/7e22ce/ffffff?text=Post+2',
+    excerpt: 'Learn the secrets to brewing the perfect cup of coffee at home every morning.'
+  },
+  {
+    title: 'Exploring the Local Mountains',
+    href: '/blog/mountain-hiking',
+    imageUrl: 'https://placehold.co/600x400/581c87/ffffff?text=Post+3',
+    excerpt: 'A photo journal from a recent hike, showcasing the beautiful scenery and trails.'
+  }
+]
+---
+
+<Layout title="Blog Posts">
+    <!-- Page Header -->
+     <div class="text-center border-b mb-12">
+        <h1 class="text-4xl font-bold tracking-tight">All posts</h1>
+        <p class="mt-2 text-lg text-gray-500">A collection of thoughts and stories</p>
+     </div>
+
+     <!-- Grid to hold post cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {fakePosts.map(post => (
+          <PostPreview
+            title={post.title},
+            href={post.href},
+            imageUrl={post.imageUrl},
+            excerpt={post.excerpt}
+            />
+        ))}
+      </div>
+</Layout>

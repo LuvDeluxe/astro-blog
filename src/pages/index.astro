@@ -1,16 +1,18 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Welcome to the Blog">
+	{/* This div is a container for welcome message.
+	*/}
+	<div class="text-center py-20">
+		<h1 class="text-5xl font-bold tracking-tight">Welcome to the Blog</h1>
+		<p class="mt-4 text-xl text-gray-600">This is the future home of an amazing blog.</p>
+
+		<div class="mt-8">
+			<a href="/blog" class="bg-purple-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-purple-700">
+				See the Posts
+			</a>
+		</div>
+	</div>
+</Layout>

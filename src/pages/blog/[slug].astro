@@ -1,0 +1,56 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+// This function is required for all dynamic routes in Astro
+// It tells Astro which pages to generate at build time
+export async function getStaticPaths() {
+    return [
+        { params: {slug: 'my-first-post' } },
+        { params: { slug: 'making-coffee' } },
+        { params: { slug: 'mountain-hiking' } }
+    ];
+}
+
+// Astro gives the `slug` from the URL through `Astro.params`
+const { slug } = Astro.params;
+
+// This is FAKE data for one post, just for styling.
+// Later, `Astro.params.slug` will give the real slug from the URL,
+// and will use it to fetch the correct post from Contentful.
+
+const fakePost = {
+  title: 'My First Blog Post',
+  publishedDate: 'July 11, 2025',
+  imageUrl: 'https://placehold.co/1200x600/581c87/ffffff?text=Blog+Post+Hero',
+  // This is fake "rich text" content.
+  content: `
+    <p>This is the beginning of a beautiful blog post. When building a website, it's often a great idea to focus on the structure and styling before diving into connecting the real data. This approach allows you to perfect the user experience and visual design without worrying about the complexities of an API.</p>
+    <p>The inspiration for this blog comes from a desire to share stories, thoughts, and experiences in a clean, readable format. We're using a serif font for the body text to enhance readability for long-form content, and a modern sans-serif font for headings to provide a clean, clear hierarchy.</p>
+    <h2>A Subheading for a New Section</h2>
+    <p>Here, we can talk about more specific details. Notice how the typography plugin we're about to use will automatically style this h2 heading differently from the main title.</p>
+    <ul>
+      <li>It will also style lists beautifully.</li>
+      <li>With proper spacing and markers.</li>
+      <li>Making them easy to read.</li>
+    </ul>
+    <p>Ultimately, the goal is to create a space that is both beautiful to look at and a pleasure to read.</p>
+  `
+};
+---
+
+<Layout title="{fakePost.title}">
+    <article>
+        <!-- Post header -->
+         <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">{fakePost.title}</h1>
+            <p class="text-lg text-gray-500">Published on {fakePost.publishedDate}</p>
+         </header>
+
+        <!-- Featured image -->
+        <img src={fakePost.imageUrl} alt={fakePost.title} class="rounded-lg shadow-lg mb-12">
+
+        <!-- Post content The `prose` class comes from a Tailwind plugin that automatically adds beautiful typographic styles to any block of HTML. -->
+        <div class="prose prose-lg max-w-none prose-p:text-gray-700 prose-headings:text-gray-900" set:html={fakePost.content}></div>
+
+    </article>
+</Layout>

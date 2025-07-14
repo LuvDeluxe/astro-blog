@@ -48,8 +48,53 @@ const currentYear = new Date().getFullYear();
 
         <footer class="w-full mt-16 py-8 bg-gray-100 border-t">
             <div class="max-w-4xl mx-auto text-center text-gray-500">
+                <!-- Social media icons -->
+                <div class="flex justify-center space-x-6 mb-6">
+                    <!-- Facebook -->
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg class="w-6 h-6 fill-current text-gray-500 hover:text-purple-600 transition-colors" viewBox="0 0 24 24">
+                            <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.14 9.5 5.32v2.14H6.1v4.13h3.4v8.2h4.13v-8.2h3.4l.5-4.13z"></path>
+                        </svg>
+                    </a>
+                    <!-- Youtube -->
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+                        <svg class="w-6 h-6 fill-current text-gray-500 hover:text-purple-600 transition-colors" viewBox="0 0 24 24">
+                            <path d="M21.58 7.19c-.23-.86-.9-1.52-1.76-1.75C18.25 5 12 5 12 5s-6.25 0-7.82.44c-.86.23-1.52.89-1.75 1.75C2 8.75 2 12 2 12s0 3.25.43 4.81c.23.86.89 1.52 1.75 1.75C5.75 19 12 19 12 19s6.25 0 7.82-.44c.86-.23 1.52-.89 1.75-1.75C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"></path>
+                        </svg>
+                    </a>
+                    <!-- TikTok -->
+                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <svg class="w-6 h-6 fill-current text-gray-500 hover:text-purple-600 transition-colors" viewBox="0 0 24 24">
+                            <path d="M12.3 0h4.2c.2 2.1 1.6 3.9 3.6 4.5v3.7a8.6 8.6 0 0 1-4.3-1.2v8.5a7 7 0 1 1-7-7c.4 0 .7 0 1 .1v3.7a3.3 3.3 0 1 0 3.3 3.3V0z"></path>
+                        </svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+						<svg class="w-6 h-6 fill-current text-gray-500 hover:text-purple-600 transition-colors" viewBox="0 0 24 24">
+							<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44c0-.795-.645-1.44-1.441-1.44z"></path>
+						</svg>
+					</a>
+                    <!-- X (Twitter) -->
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X">
+						<svg class="w-6 h-6 fill-current text-gray-500 hover:text-purple-600 transition-colors" viewBox="0 0 24 24">
+							<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+						</svg>
+					</a>
+                    <!-- Pinterest -->
+                    <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+						<svg class="w-6 h-6 fill-current text-gray-500 hover:text-purple-600 transition-colors" viewBox="0 0 24 24">
+							<path d="M12 2C6.477 2 2 6.477 2 12c0 4.237 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.182-.78 1.172-4.97 1.172-4.97s-.299-.6-.299-1.486c0-1.39.806-2.428 1.81-2.428.852 0 1.264.64 1.264 1.408 0 .858-.545 2.14-.828 3.33-.236.995.5 1.807 1.48 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.177-4.068-2.845 0-4.515 2.135-4.515 4.34 0 .859.331 1.781.745 2.281a.3.3 0 01.069.288l-.278 1.133c-.044.183-.145.223-.335.134-1.249-.58-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.965-.525-2.291-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.96.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"></path>
+						</svg>
+					</a>
+                    <!-- Outschool -->
+                     <a href="https://outschool.com" target="_blank" rel="noopener noreferrer" aria-label="Outschool">
+						<svg class="w-6 h-6 fill-current text-gray-500 hover:text-purple-600 transition-colors" viewBox="0 0 24 24">
+							<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.04 4.63c.55-.55 1.44-.55 2.08 0l4.33 4.33c.55.55.55 1.44 0 2.08l-4.33 4.33c-.55.55-1.44.55-2.08 0l-4.33-4.33c-.55-.55-.55-1.44 0-2.08l4.33-4.33z"></path>
+						</svg>
+					</a>
+                </div>
+
                 <p>&copy; {currentYear} Ms.Aimee Laoshi. All Rights Reserved.</p>
-				<p class="text-sm mt-2">Built with ❤️ using Astro & Contentful</p>
             </div>
         </footer>
 
